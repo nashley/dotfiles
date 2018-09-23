@@ -197,6 +197,7 @@ exec_always feh --bg-scale ~/images/wallpapers/343272.jpg
 # Hide all borders for gaps to work properly
 hide_edge_borders both
 for_window [class=".*"] border pixel 0
+default_border none
 
 # Set colors
 set $bg-color			#2f343f
