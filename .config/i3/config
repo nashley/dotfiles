@@ -194,7 +194,7 @@ bindsym $mod+p exec mons -n right
 # Set background
 exec_always feh --bg-scale ~/images/wallpapers/343272.jpg
 
-# Hide borders
+# Hide all borders for gaps to work properly
 hide_edge_borders both
 for_window [class=".*"] border pixel 0
 
@@ -217,7 +217,7 @@ bar {
 	status_command i3blocks
 	colors {
 		background $bg-color
-		separator #757575
+		separator $inactive-text-color
 		#			border			background		text
 		focused_workspace	$bg-color		$bg-color		$text-color
 		inactive_workspace	$inactive-bg-color	$inactive-bg-colord	$inactive-text-color
@@ -233,3 +233,7 @@ bindsym $mod+i gaps outer current set 20; gaps inner current set 20
 
 # Start up programs
 exec slack
+
+# Set GTK themes
+exec_always export GTK_THEME=Arc:Dark
+exec_always export GTK2_RC_FILES=/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc
