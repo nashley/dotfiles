@@ -1,0 +1,9 @@
+#!/bin/sh
+
+device='DELL081C:00 044E:121F Touchpad'
+state=$(xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$")
+if [ "$state" -eq '0' ]; then
+	xinput --enable "$device"
+else
+	xinput --disable "$device"
+fi

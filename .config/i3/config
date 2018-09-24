@@ -180,7 +180,7 @@ bindsym XF86MonBrightnessUp exec enlighten +5% # increase screen brightness
 bindsym XF86MonBrightnessDown exec enlighten -5% # decrease screen brightness
 
 # Touchpad controls
-bindsym $mod+t exec ~/bin/touchpad_toggle.sh # toggle touchpad
+bindsym $mod+t exec ~/bin/toggle_touchpad # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -192,7 +192,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec mons -n right
 
 # Set background
-exec_always feh --bg-scale ~/images/wallpapers/343272.jpg
+exec_always feh --bg-scale ~/images/wallpapers/vVv8ka28BTyQMv8AsaByefIYhoFVRfTBfihJ0-K9ap0.jpg
 
 # Hide all borders for gaps to work properly
 hide_edge_borders both

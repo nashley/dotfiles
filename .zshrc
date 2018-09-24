@@ -26,7 +26,7 @@ setopt appendhistory autocd nomatch
 unsetopt beep extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
-export PATH="$PATH:~/bin/"
+export PATH=$PATH:/home/nick/bin/
 alias vim="nvim"
 bindkey -M vicmd '/' history-incremental-search-backward
 export EDITOR=nvim
