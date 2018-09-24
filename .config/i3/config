@@ -168,7 +168,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Lock the screen and turn off the display
-bindsym $mod+shift+x exec i3lock && xset dpms force off
+bindsym $mod+shift+x exec i3lock && sleep 1 && xset dpms force off
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
@@ -196,8 +196,9 @@ exec_always feh --bg-scale ~/images/wallpapers/vVv8ka28BTyQMv8AsaByefIYhoFVRfTBf
 
 # Hide all borders for gaps to work properly
 hide_edge_borders both
-for_window [class=".*"] border pixel 0
-default_border pixel
+for_window [class="^.*"] border pixel 0
+default_border pixel 0
+default_floating_border pixel 0
 
 # Set colors
 set $bg-color			#2f343f
@@ -227,8 +228,8 @@ bar {
 }
 
 # Gaps
-gaps inner 0
-gaps outer 10
+gaps inner 10
+gaps outer 0
 bindsym $mod+o gaps outer current set 0; gaps inner current set 10
 bindsym $mod+i gaps outer current set 20; gaps inner current set 20
 
