@@ -132,6 +132,17 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="jetbrains-idea"] $ws1
 assign [class="Google-chrome"] $ws2
 assign [class="Slack"] $ws9
+# no_focus [class="^.*"]
+
+bindsym $mod+Shift+Mod1+h move workspace to output left
+bindsym $mod+Shift+Mod1+j move workspace to output down
+bindsym $mod+Shift+Mod1+k move workspace to output up
+bindsym $mod+Shift+Mod1+l move workspace to output right
+
+bindsym $mod+Shift+Mod1+Left move workspace to output left
+bindsym $mod+Shift+Mod1+Down move workspace to output down
+bindsym $mod+Shift+Mod1+Up move workspace to output up
+bindsym $mod+Shift+Mod1+Right move workspace to output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
