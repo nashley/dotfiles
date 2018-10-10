@@ -179,7 +179,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Lock the screen and turn off the display
-bindsym $mod+shift+x exec i3lock && sleep 1 && xset dpms force off
+bindsym $mod+shift+x exec i3lock -c 000000 -f && sleep 1 && xset dpms force off
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% # increase sound volume
