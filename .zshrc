@@ -27,14 +27,25 @@ unsetopt beep extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 export PATH=$PATH:/home/nick/bin/
-alias vim="nvim"
+alias vim="nvim -p"
 bindkey -M vicmd '/' history-incremental-search-backward
 export EDITOR=nvim
 export KEYTIMEOUT=1
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
+ function zle-line-init zle-keymap-select {
+ #    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+ #    RPS2=$RPS1
+	zle reset-prompt
+#     echo
+#     #LPS1=$PROMPT'${${KEYMAP/vicmd/❮%f}/(main|viins)/❯%f} '
 }
-zle -N zle-line-init
-zle -N zle-keymap-select
+ zle -N zle-line-init
+ zle -N zle-keymap-select
+
+autoload -U promptinit; promptinit
+prompt spaceship
+#PROMPT='%(?. %F{green}.%F{red}✖%F{green})${${KEYMAP/vicmd/❮%f}/(main|viins)/❯%f} '
+#PROMPT='%F{white}%* '$PROMPT
+#PROMPT='%(?.%F{green}.%F{red})${${KEYMAP/vicmd/❮%f}/(main|viins)/❯%f} '
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+bindkey "^?" backward-delete-char

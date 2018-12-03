@@ -130,7 +130,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 assign [class="jetbrains-idea"] $ws1
-assign [class="Google-chrome"] $ws2
+# assign [class="Google-chrome"] $ws2
 assign [class="Slack"] $ws9
 # no_focus [class="^.*"]
 
@@ -203,11 +203,12 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+p exec mons -n right
 
 # Set background
-exec_always feh --bg-scale ~/images/wallpapers/vVv8ka28BTyQMv8AsaByefIYhoFVRfTBfihJ0-K9ap0.jpg
+exec_always feh --bg-scale ~/images/wallpapers/874823.jpg
 
 # Hide all borders for gaps to work properly
 hide_edge_borders both
 for_window [class="^.*"] border pixel 0
+# for_window [class="jetbrains-idea"] focus
 default_border pixel 0
 default_floating_border pixel 0
 
@@ -239,7 +240,7 @@ bar {
 }
 
 # Gaps
-gaps inner 10
+gaps inner 20
 gaps outer 0
 bindsym $mod+o gaps outer current set 0; gaps inner current set 10
 bindsym $mod+i gaps outer current set 20; gaps inner current set 20

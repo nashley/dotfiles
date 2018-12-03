@@ -46,7 +46,7 @@ URxvt*shading:		15
 URxvt*internalBorder:	 8
 
 ! Set font
-URxvt*font: xft:Noto Sans Mono:size=8
+URxvt*font: xft:Dejavu Sans Mono:size=8,xft:Roboto Mono:size=8,xft:terminus:pixelsize=8,xft:FreeMono:size=8
 
 ! Extensions
 URxvt*perl-ext:			default,url-select,selection-to-clipboardkey,board-select,resize-font
