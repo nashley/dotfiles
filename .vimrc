@@ -1,32 +1,16 @@
-:nnoremap <esc> :noh<return><esc>
-filetype plugin on
-filetype indent on
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<CR>
+set runtimepath+=~/.vim_runtime
 
-" Tell Vim your background is dark and it should shift colors to make it easier to read
-"set background=dark
+source ~/.vim_runtime/vimrcs/basic.vim
+source ~/.vim_runtime/vimrcs/filetypes.vim
+source ~/.vim_runtime/vimrcs/plugins_config.vim
+source ~/.vim_runtime/vimrcs/extended.vim
 
-" Enable vertical column of line numbers; useful for jumping to specific lines
-set number
+try
+source ~/.vim_runtime/my_configs.vim
+catch
+endtry
 
-" Enable line,column information within status bar
-set ruler
-
-" Enable syntax color coding
-syntax on
-
-" Override default number of spaces that tabs are displayed as (8)
-set shiftwidth=8
-set tabstop=8
-
-" Disable wrapping long lines
-set nowrap
-
-" Enable reading first/last N lines of file for vim modeline info to format file
-set modelines=5
-
-" Ignore case for search
-set ignorecase
-
-" Add shortcut for sudo saving
-cmap w!! w !sudo tee > /dev/null %
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l

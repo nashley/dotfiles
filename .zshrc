@@ -26,7 +26,7 @@ setopt appendhistory autocd nomatch
 unsetopt beep extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
-export PATH=$PATH:/home/nick/bin/
+export PATH=$PATH:/home/nick/bin/:/home/nick/go/bin
 alias vim="nvim -p"
 bindkey -M vicmd '/' history-incremental-search-backward
 export EDITOR=nvim
@@ -49,3 +49,5 @@ prompt spaceship
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey "^?" backward-delete-char
+alias killbg='kill ${${(v)jobstates##*:*:}%=*}'
+alias ngroks='ngrok http -subdomain=nashley -inspect=false -auth="username:password" -bind-tls=true 8000'
