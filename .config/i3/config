@@ -30,7 +30,7 @@ font pango:Noto Sans Mono Med 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -279,7 +279,7 @@ bindsym $mod+o gaps outer current set 0; gaps inner current set 10
 bindsym $mod+i gaps outer current set 20; gaps inner current set 20
 
 # Start up programs
-exec surf bandwidth.slack.com
+exec picom -b
 
 # Set GTK themes
 exec_always export GTK_THEME=Arc:Dark
